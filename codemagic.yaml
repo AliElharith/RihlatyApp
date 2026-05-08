@@ -87,7 +87,7 @@ workflows:
     publishing:
       email:
         recipients:
-          - $RELEASE_EMAIL
+          - rihlaty.sd@gmail.com
         notify:
           success: true
           failure: true
@@ -131,7 +131,7 @@ workflows:
     publishing:
       email:
         recipients:
-          - $DEBUG_EMAIL
+          - rihlaty.sd@gmail.com
         notify:
           success: true
           failure: true
