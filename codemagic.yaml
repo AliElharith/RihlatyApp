@@ -7,7 +7,6 @@ workflows:
     environment:
       flutter: stable
       xcode: latest
-      android_sdk: default
       
       groups:
         - keystore_credentials
@@ -108,7 +107,6 @@ workflows:
     environment:
       flutter: stable
       xcode: latest
-      android_sdk: default
     
     scripts:
       - name: Set up local.properties
