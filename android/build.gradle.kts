@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = '1.9.23'
+    // Kotlin version is already defined in the plugins block
 }
 
 plugins {
