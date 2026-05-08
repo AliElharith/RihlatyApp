@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "676998221157",
+    "project_id": "rihlaty-7f7be",
+    "storage_bucket": "rihlaty-7f7be.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676998221157:android:8366b3b69f16bd2b1ca58c",
+        "android_client_info": {
+          "package_name": "com.rihlaty.rihlaty_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDu-JX7nENx7EPAA7RmT1kRPconhCPMPHA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
