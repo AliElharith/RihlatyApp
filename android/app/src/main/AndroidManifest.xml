@@ -62,6 +62,7 @@
         <!-- DO NOT hardcode API keys in manifest - use environment variables instead -->
         <!-- Add this via gradle.properties or build.gradle.kts -->
         
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="joH9s6UVgKaNlFpKBHhE" />
     </application>
     
     <!-- Required to query activities that can process text, see:
