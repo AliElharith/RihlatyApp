@@ -85,7 +85,7 @@ class AuthNotifier extends StateNotifier<AsyncValue<User?>> {
           'phone': user.phone,
           'role': user.role.toString().split('.').last,
           'name': user.name,
-          'created_at': user.createdAt?.toIso8601String(),
+          'created_at': user.createdAt.toIso8601String(),
         });
         state = AsyncValue.data(user);
       }

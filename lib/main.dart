@@ -75,7 +75,7 @@ class MyApp extends ConsumerWidget {
       builder: (context, child) {
         return MediaQuery(
           data: MediaQuery.of(context).copyWith(
-            textScaleFactor: 1.0, // Prevent text scaling issues
+            textScaler: const TextScaler.linear(1.0), // Prevent text scaling issues
           ),
           child: child ?? const SizedBox.shrink(),
         );

@@ -81,7 +81,7 @@ class SupabaseService {
 
   Future<AuthResponse> signUpWithPhone(String phone, String password) async {
     try {
-      final response = await _client.auth.signUpWithPassword(
+      final response = await _client.auth.signUp(
         email: '$phone@rihlaty.local',
         password: password,
       );

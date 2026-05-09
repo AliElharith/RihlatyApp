@@ -204,9 +204,11 @@ class DriverProfile extends User {
     };
   }
 
+  @override
   DriverProfile copyWith({
     String? uid,
     String? phone,
+    UserRole? role,
     String? name,
     String? fcmToken,
     DateTime? createdAt,
@@ -321,9 +323,11 @@ class MerchantProfile extends User {
     };
   }
 
+  @override
   MerchantProfile copyWith({
     String? uid,
     String? phone,
+    UserRole? role,
     String? name,
     String? fcmToken,
     DateTime? createdAt,
