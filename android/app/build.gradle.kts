@@ -31,11 +31,11 @@ android {
 
     defaultConfig {
         applicationId = "com.rihlaty.rihlaty_app"
-        minSdk = 21 // Manually setting minSdk to ensure compatibility with multidex and Firebase
+        minSdk = 23
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode()
-versionName = flutter.versionName()
-        
+        versionName = flutter.versionName()
+
         multiDexEnabled = true
     }
 
@@ -74,7 +74,6 @@ flutter {
 }
 
 dependencies {
-    // Firebase BOM is managed by the flutter plugins, but adding it here for safety
     implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
     implementation("com.google.firebase:firebase-analytics")
     implementation("androidx.multidex:multidex:2.0.1")
