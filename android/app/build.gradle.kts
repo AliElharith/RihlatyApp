@@ -33,8 +33,8 @@ android {
         applicationId = "com.rihlaty.rihlaty_app"
         minSdk = 21 // Manually setting minSdk to ensure compatibility with multidex and Firebase
         targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        versionCode = flutter.versionCode.toInt()
+versionName = flutter.versionName.toString()
         
         multiDexEnabled = true
     }
