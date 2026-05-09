@@ -50,7 +50,7 @@ dependencies:
   logger: ^2.2.0
   
   # Audio & Speech
-  record: 5.1.1
+  record: ^5.2.0
   speech_to_text: ^6.6.0
   
   # Image Compression
