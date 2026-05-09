@@ -3,37 +3,37 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppColors {
   // Primary Colors
-  static const Color primary = Color(0xFFB71C1C); // أحمر داكن
-  static const Color primaryLight = Color(0xFFD32F2F); // أحمر فاتح
-  
+  static const Color primary = Color(0xFFB71C1C);
+  static const Color primaryLight = Color(0xFFD32F2F);
+
   // Secondary Colors
-  static const Color secondary = Color(0xFFFFDAD6); // ذهبي/كهرماني
-  static const Color secondaryDark = Color(0xFFFBC02D); // أصفر
-  
+  static const Color secondary = Color(0xFFFFDAD6);
+  static const Color secondaryDark = Color(0xFFFBC02D);
+
   // Neutral Colors
-  static const Color neutral = Color(0xFF757575); // رمادي محايد
-  
+  static const Color neutral = Color(0xFF757575);
+
   // Background & Surface
   static const Color scaffoldBackground = Color(0xFFF9F9F9);
   static const Color surface = Color(0xFFFFFFFF);
-  
+
   // Error
   static const Color error = Color(0xFFD32F2F);
-  
+
   // Success
   static const Color success = Color(0xFF4CAF50);
-  
+
   // Warning
   static const Color warning = Color(0xFFFFC107);
-  
+
   // Info
   static const Color info = Color(0xFF2196F3);
-  
+
   // Text Colors
   static const Color textPrimary = Color(0xFF212121);
   static const Color textSecondary = Color(0xFF757575);
   static const Color textHint = Color(0xFFBDBDBD);
-  
+
   // Borders
   static const Color borderColor = Color(0xFFE0E0E0);
   static const Color dividerColor = Color(0xFFEEEEEE);
@@ -46,8 +46,7 @@ class AppTheme {
       brightness: Brightness.light,
       primaryColor: AppColors.primary,
       scaffoldBackgroundColor: AppColors.scaffoldBackground,
-      
-      // Color Scheme
+
       colorScheme: ColorScheme.light(
         primary: AppColors.primary,
         onPrimary: Colors.white,
@@ -58,8 +57,7 @@ class AppTheme {
         surface: AppColors.surface,
         onSurface: AppColors.textPrimary,
       ),
-      
-      // Text Themes
+
       textTheme: GoogleFonts.cairoTextTheme().copyWith(
         displayLarge: GoogleFonts.cairo(
           fontSize: 32,
@@ -132,8 +130,7 @@ class AppTheme {
           color: AppColors.textSecondary,
         ),
       ),
-      
-      // AppBar Theme
+
       appBarTheme: AppBarTheme(
         backgroundColor: AppColors.primary,
         foregroundColor: Colors.white,
@@ -145,8 +142,7 @@ class AppTheme {
           color: Colors.white,
         ),
       ),
-      
-      // Button Themes
+
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.primary,
@@ -162,7 +158,7 @@ class AppTheme {
           ),
         ),
       ),
-      
+
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           foregroundColor: AppColors.primary,
@@ -177,7 +173,7 @@ class AppTheme {
           ),
         ),
       ),
-      
+
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
           foregroundColor: AppColors.primary,
@@ -188,12 +184,12 @@ class AppTheme {
           ),
         ),
       ),
-      
-      // Input Decoration Theme
+
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: Colors.white,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(color: AppColors.borderColor),
@@ -223,9 +219,9 @@ class AppTheme {
           fontSize: 14,
         ),
       ),
-      
-      // Card Theme
-      cardTheme: CardThemeData(
+
+      // Fixed Card Theme
+      cardTheme: CardTheme(
         color: AppColors.surface,
         elevation: 2,
         shape: RoundedRectangleBorder(
@@ -233,15 +229,13 @@ class AppTheme {
         ),
         margin: const EdgeInsets.all(0),
       ),
-      
-      // Divider Theme
+
       dividerTheme: const DividerThemeData(
         color: AppColors.dividerColor,
         thickness: 1,
         space: 16,
       ),
-      
-      // Floating Action Button Theme
+
       floatingActionButtonTheme: FloatingActionButtonThemeData(
         backgroundColor: AppColors.primary,
         foregroundColor: Colors.white,
@@ -250,9 +244,9 @@ class AppTheme {
           borderRadius: BorderRadius.circular(16),
         ),
       ),
-      
-      // Dialog Theme
-      dialogTheme: DialogThemeData(
+
+      // Fixed Dialog Theme
+      dialogTheme: DialogTheme(
         backgroundColor: AppColors.surface,
         elevation: 8,
         shape: RoundedRectangleBorder(
@@ -270,8 +264,7 @@ class AppTheme {
       ),
     );
   }
-  
-  // Gradient
+
   static LinearGradient primaryGradient = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
