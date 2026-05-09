@@ -935,7 +935,7 @@ packages:
       sha256: "2c9aae4127bdc8993206464fcc063611e0e36e72018696cd9631023a31b24254"
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.0"
+    version: "1.5.0"
   objective_c:
     dependency: transitive
     description:
@@ -1143,7 +1143,7 @@ packages:
       sha256: "348db92c4ec1b67b1b85d791381c8c99d7c6908de141e7c9edc20dad399b15ce"
       url: "https://pub.dev"
     source: hosted
-    version: "0.4.1"
+    version: "0.5.1"
   record_macos:
     dependency: transitive
     description:
@@ -1159,7 +1159,7 @@ packages:
       sha256: "7a2d4ce7ac3752505157e416e4e0d666a54b1d5d8601701b7e7e5e30bec181b4"
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.0"
+    version: "1.5.0"
   record_use:
     dependency: transitive
     description:
@@ -1175,7 +1175,7 @@ packages:
       sha256: "219ffb4ca59b4338117857db56d3ffadbde3169bcaf1136f5f4d4656f4a2372d"
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.0"
+    version: "1.5.0"
   record_windows:
     dependency: transitive
     description:
