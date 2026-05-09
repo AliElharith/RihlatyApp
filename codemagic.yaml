@@ -16,6 +16,8 @@ workflows:
           echo "flutter.sdk=$HOME/programs/flutter" > android/local.properties
       - name: Get Flutter packages
         script: |
+          flutter pub cache clean -f
+          rm -f pubspec.lock
           flutter pub get
       - name: Build Android APK
         script: |
