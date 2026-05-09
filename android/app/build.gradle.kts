@@ -1,5 +1,4 @@
 import java.util.Properties
-import java.io.FileInputStream
 
 plugins {
     id("com.android.application")
@@ -32,7 +31,7 @@ android {
 
     defaultConfig {
         applicationId = "com.rihlaty.rihlaty_app"
-        minSdk = flutter.minSdkVersion
+        minSdk = 21 // Manually setting minSdk to ensure compatibility with multidex and Firebase
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
@@ -75,7 +74,8 @@ flutter {
 }
 
 dependencies {
-    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+    // Firebase BOM is managed by the flutter plugins, but adding it here for safety
+    implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
     implementation("com.google.firebase:firebase-analytics")
     implementation("androidx.multidex:multidex:2.0.1")
 }
