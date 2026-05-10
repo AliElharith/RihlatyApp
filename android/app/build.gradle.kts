@@ -9,8 +9,11 @@ plugins {
 
 val keystoreProperties = Properties()
 val keystorePropertiesFile = rootProject.file("key.properties")
+
 if (keystorePropertiesFile.exists()) {
-    keystorePropertiesFile.inputStream().use { keystoreProperties.load(it) }
+    keystorePropertiesFile.inputStream().use {
+        keystoreProperties.load(it)
+    }
 }
 
 android {
@@ -41,23 +44,32 @@ android {
 
     signingConfigs {
         create("release") {
-            keyAlias = keystoreProperties.getProperty("keyAlias", "rihlaty_key")
-            keyPassword = keystoreProperties.getProperty("keyPassword", "rihlaty@2024")
-            storeFile = file(keystoreProperties.getProperty("storeFile") ?: "../rihlaty_keystore.jks")
-            storePassword = keystoreProperties.getProperty("storePassword", "rihlaty@2024")
+            keyAlias = keystoreProperties.getProperty("keyAlias", "androiddebugkey")
+            keyPassword = keystoreProperties.getProperty("keyPassword", "android")
+            storeFile = file(
+                keystoreProperties.getProperty(
+                    "storeFile",
+                    "${System.getProperty("user.home")}/.android/debug.keystore"
+                )
+            )
+            storePassword = keystoreProperties.getProperty("storePassword", "android")
         }
     }
 
     buildTypes {
         release {
+            // استخدام debug keystore مؤقتًا حتى ينجح build
             signingConfig = signingConfigs.getByName("release")
+
             isMinifyEnabled = false
             isShrinkResources = false
+
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
+
         debug {
             signingConfig = signingConfigs.getByName("debug")
         }
