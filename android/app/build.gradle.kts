@@ -42,25 +42,9 @@ android {
         multiDexEnabled = true
     }
 
-    signingConfigs {
-        create("release") {
-            keyAlias = keystoreProperties.getProperty("keyAlias", "androiddebugkey")
-            keyPassword = keystoreProperties.getProperty("keyPassword", "android")
-            storeFile = file(
-                keystoreProperties.getProperty(
-                    "storeFile",
-                    "${System.getProperty("user.home")}/.android/debug.keystore"
-                )
-            )
-            storePassword = keystoreProperties.getProperty("storePassword", "android")
-        }
-    }
-
     buildTypes {
         release {
-            // استخدام debug keystore مؤقتًا حتى ينجح build
-            signingConfig = signingConfigs.getByName("release")
-
+            // بدون signingConfig لتجنب أخطاء keystore
             isMinifyEnabled = false
             isShrinkResources = false
 
@@ -71,7 +55,7 @@ android {
         }
 
         debug {
-            signingConfig = signingConfigs.getByName("debug")
+            // لا حاجة لتوقيع مخصص
         }
     }
 
